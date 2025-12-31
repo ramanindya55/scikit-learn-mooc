@@ -1,6 +1,11 @@
+[project]
+name = "scikit-learn-mooc"
+version = "0.1.0"
+requires-python = ">=3.14"
+
 [tool.black]
 line-length = 79
-target_version = ['py38', 'py39', 'py310', 'py311']
+target_version = ['py311', 'py312', 'py313', 'py314']
 preview = true
 exclude = '''
 /(
@@ -19,4 +24,17 @@ ignore = [
     'F401',  # imported but unused
     'E501',  # line too long
     'E203',  # whitespace before ':'
+]
+
+[dependency-groups]
+dev = [
+    "beautifulsoup4>=4.14.3",
+    "ipython>=9.8.0",
+    "jupyter-book>=0.11",
+    "jupytext>=1.18.1",
+    "matplotlib>=3.10.8",
+    "pandas>=1",
+    "plotly>=6.5.0",
+    "scikit-learn>=1.6",
+    "seaborn>=0.13",
 ]
